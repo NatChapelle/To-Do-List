@@ -47,26 +47,23 @@ h1 {
 #inputfield::placeholder {
     color:  #530846f7 ;
 }
-.todo-list {
-    display: flex;
-    align-items: center;
-   
-}
-.todo-list> ul {
+
+ ul li {
     list-style-type: none;
     font-weight: 100;
     
 }
 
 
-li::before {
+ul li::before {
     content: "💪";
 }
 li {
     text-align: left;
     color: #6819c8;
 }
-li:hover::after {
+
+ul li:hover::after {
     content: " (fait)";
     color: rgb(230, 48, 48);
 }

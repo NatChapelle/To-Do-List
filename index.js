@@ -5,17 +5,19 @@ const form = document.querySelector("form");
 function storageItems() {
     window.localStorage.todoList = list.innerHTML;
     //list innerhtml  envoyé dans localstorage sous nom .todoList
-}
+};
+
 function getTodos() {
     if (window.localStorage.todoList) { 
         list.innerHTML = window.localStorage.todoList;
-        //recupere les données
+        // recupere les données
     } else {
-        list.innerHTML =`<li>cliquez sur un to do pour le supprimer</li>`;
-    } 
+        list.innerHTML = `<li>oio</li>`;
  }
+};
    
   //jouer la fonction
+  window.addEventListener("load", getTodos);
 getTodos();
 
 
@@ -32,7 +34,6 @@ list.innerHTML +=`<li>${inputfield.value}</li>`;
 inputfield.value = "";
     // on stocke ladonnée dasn local storage via fonction
 storageItems();
-
 });
 
 
@@ -46,7 +47,7 @@ list.addEventListener("click", (e) => {
     } else {
         // injecter classlist checked config css
         e.target.classList.add("checked");
-    };
+    }
         // on stocke ladonnée dasn local storage via fonction
 storageItems();
 
